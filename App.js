@@ -14,10 +14,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <UserInput saveUsers={saveUsers} />
-      <View style={styles.items}></View>
-      {users.map((user) => {
-        return <UserIItems name={user} />;
-      })}
+      <View style={styles.items}>
+        {users.map((user) => {
+          return <UserIItems name={user} />;
+        })}
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -33,7 +35,6 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   items: {
-    backgroundColor: "blue",
     width: "96%",
     flex: 5,
   },

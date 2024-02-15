@@ -23,7 +23,6 @@ export default UserInput;
 
 const styles = StyleSheet.create({
   viewInput: {
-    backgroundColor: "red",
     width: "96%",
     flex: 1,
     flexDirection: "row",
@@ -38,6 +37,11 @@ const styles = StyleSheet.create({
   btn: {
     flex: 1,
     backgroundColor: "#7010e6",
+    height: 42,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    marginLeft: 5,
   },
   btnTXT: {
     color: "white",
