@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import UserInput from "./Components/UserInput";
 import { useState } from "react";
+import UserIItems from "./Components/UserIItems";
 
 export default function App() {
   const [users, setUsers] = useState([]);
@@ -14,6 +15,9 @@ export default function App() {
     <View style={styles.container}>
       <UserInput saveUsers={saveUsers} />
       <View style={styles.items}></View>
+      {users.map((user) => {
+        return <UserIItems name={user} />;
+      })}
       <StatusBar style="auto" />
     </View>
   );
